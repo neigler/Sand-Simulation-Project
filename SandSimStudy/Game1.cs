@@ -27,7 +27,7 @@ namespace SandSimStudy
 
     public class Game1 : Game
     {
-        public const int size_x = 40;
+        public const int size_x = 64;
         public const int size_y = size_x;
         public int timer = 0;
 
@@ -284,7 +284,7 @@ namespace SandSimStudy
             // delay how fast you can create particles.
             timer += gameTime.ElapsedGameTime.Milliseconds;
             var mouse_state = Mouse.GetState();
-            if (mouse_state.LeftButton == ButtonState.Pressed && timer > 40 && wood)
+            if (mouse_state.LeftButton == ButtonState.Pressed && timer > 10 && wood)
             {
                 timer = 0;
                 var x = mouse_state.Position.X * size_x / Storage.GDM.PreferredBackBufferWidth;
@@ -298,7 +298,7 @@ namespace SandSimStudy
                     Storage.particles[x, y] = particle;
                 }
             }
-            if (mouse_state.LeftButton == ButtonState.Pressed && timer > 40 && water)
+            if (mouse_state.LeftButton == ButtonState.Pressed && timer > 10 && water)
             {
                 timer = 0;
                 var x = mouse_state.Position.X * size_x / Storage.GDM.PreferredBackBufferWidth;
@@ -312,7 +312,7 @@ namespace SandSimStudy
                     Storage.particles[x, y] = particle;
                 }
             }
-            if (mouse_state.LeftButton == ButtonState.Pressed && timer > 40 && sand)
+            if (mouse_state.LeftButton == ButtonState.Pressed && timer > 10 && sand)
             {
                 timer = 0;
                 var x = mouse_state.Position.X * size_x / Storage.GDM.PreferredBackBufferWidth;
@@ -326,7 +326,7 @@ namespace SandSimStudy
                     Storage.particles[x, y] = particle;
                 }
             }
-            if (mouse_state.LeftButton == ButtonState.Pressed && timer > 40 && gas)
+            if (mouse_state.LeftButton == ButtonState.Pressed && timer > 10 && gas)
             {
                 timer = 0;
                 var x = mouse_state.Position.X * size_x / Storage.GDM.PreferredBackBufferWidth;
